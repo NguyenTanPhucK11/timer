@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <body style="text-align: center; justify-content: center">
+    <div id="setting" style="display: none">
+      <h1>SETTING</h1>
+
+      <div>
+        <input
+          style="text-align: center; margin: 10px; width: 150px"
+          class="form-control"
+          placeholder="Timer"
+          type="time"
+          id="timer-setting"
+          value="00:10:00"
+          step="2"
+        />
+      </div>
+      <div>
+        <input
+          style="text-align: center; margin: 10px; width: 150px"
+          class="form-control"
+          placeholder="Timer Remain"
+          type="time"
+          value="00:02:00"
+          id="timer-remain-setting"
+          step="2"
+        />
+      </div>
+      <button class="btn btn-primary" onclick="hideSetting()">OK</button>
+    </div>
+    <div style="display: show" id="time">
+      <h1>TIMER</h1>
+      <div style="display: inline">
+        <div style="float: center" id="timer"></div>
+        <!-- <div style="float: right" id="timer-remain"></div> -->
+      </div>
+      <div id="audio" style="margin-bottom: 20px"></div>
+      <button class="btn btn-primary" onclick="startTimer(timeLeft)">
+        Start
+      </button>
+      <button class="btn btn-primary" onclick="showSetting()">Setting</button>
+    </div>
+  </body>
+
+  <script src="app.js"></script>
+</html>
